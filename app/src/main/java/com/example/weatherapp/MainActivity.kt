@@ -49,13 +49,13 @@ class MainActivity : AppCompatActivity() {
     }
 
     private fun dayName(timestamp: Long): String {
-        val sdf = SimpleDateFormat("HH:mm", Locale.getDefault())
+        val sdf = SimpleDateFormat("EEEE", Locale.getDefault())
         return sdf.format((Date(timestamp * 1000)))
     }
 
     private fun time(timestamp: Long): String {
-        val sdf = SimpleDateFormat("EEEE", Locale.getDefault())
-        return sdf.format((Date()))
+        val sdf = SimpleDateFormat("HH:mm", Locale.getDefault())
+        return sdf.format((Date(timestamp)))
     }
 
     private fun fetchWeatherData(cityName: String) {
